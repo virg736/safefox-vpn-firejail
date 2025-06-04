@@ -1,3 +1,13 @@
+# ===============================================================
+# Script Safefox VPN Firejail 
+# Auteur : Virginie
+# Licence : MIT
+#
+# ⚠️ AVERTISSEMENT :
+# Usage strictement pédagogique. L’auteure décline toute responsabilité
+# en cas d’usage malveillant ou illégal.
+
+
 #!/bin/bash
 
 # --------------------------------------------
