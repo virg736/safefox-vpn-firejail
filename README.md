@@ -90,7 +90,7 @@ Après l’installation, ouvrez un nouveau terminal ou rechargez le fichier de c
 
 source ~/.zshrc
 
-# ou
+ou
 source ~/.bashrc
 
 Ensuite, lancez :
@@ -98,7 +98,7 @@ safefox
 
 ---
 
- # VPN : ce qu’il faut comprendre
+ ## VPN : ce qu’il faut comprendre
 
 
 Le script ne configure pas de VPN. Il suppose que vous utilisez déjà un VPN fonctionnel.
@@ -137,7 +137,7 @@ Pour des raisons de sécurité, il est conseillé d’utiliser un VPN sérieux e
 
 ---
 
- # Licence
+ ## Licence
 
 Projet sous licence MIT
 
