@@ -161,21 +161,28 @@ Pour garantir une navigations sécuritée, il est recommandé d’utiliser un VP
 
  ## Licence
 
-le Script est publié sous la licence MIT
-
-Ce projet est exclusivement destiné à des fins éducatives, dans le cadre d'une formation en cybersécurité.
- L’auteure ne cautionne ni n’autorise l’utilisation de ces techniques en dehors d’un cadre légal strictement défini.
- Toute utilisation non autorisée est interdite et relève de la seule responsabilité de l’utilisateur.
+Le script est publié sous la licence **MIT**.
 
 ---
 
-##  Auteur / Droits
+## À propos de l’usage
 
-## Droits sur les contenus visuels
+Ce projet est destiné **exclusivement à des fins pédagogiques**, notamment dans le cadre :
+- d’une formation en cybersécurité,
+- de tests d’intrusion légaux (pentest),
+- d’analyses réseau dans un environnement contrôlé.
 
-Les visuels, images ou illustrations présents dans ce dépôt sont la propriété exclusive de l’auteure.
-Toute reproduction, modification ou réutilisation sans accord préalable est strictement interdite.
-© 2025 Virginie Lechene – Tous droits réservés.
+> ❗️L’auteure **ne cautionne ni n’autorise** l’utilisation de ce script en dehors d’un cadre légal strictement défini.
+> Toute utilisation non conforme est interdite et relève **uniquement de la responsabilité de l’utilisateur**.
+
+---
+
+## Droits sur les visuels
+
+Les visuels, illustrations ou captures présents dans ce dépôt sont la propriété exclusive de l’auteure.
+Toute reproduction ou réutilisation sans **autorisation préalable** est interdite.
+
+© 2025 Virginie Lechene — Tous droits réservés.
 
 
 
