@@ -172,7 +172,7 @@ Ce projet est destiné **exclusivement à des fins pédagogiques**, notamment da
 - de tests d’intrusion légaux (pentest),
 - d’analyses réseau dans un environnement contrôlé.
 
-> ❗️L’auteure **ne cautionne ni n’autorise** l’utilisation de ce script en dehors d’un cadre légal strictement défini.
+> L’auteure **ne cautionne ni n’autorise** l’utilisation de ce script en dehors d’un cadre légal strictement défini.
 > Toute utilisation non conforme est interdite et relève **uniquement de la responsabilité de l’utilisateur**.
 
 ---
