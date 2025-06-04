@@ -24,7 +24,7 @@
 
 # SafeFox VPN Firejail
 
-Navigateur sécurisé via Firejail + VPN, pensé pour les pentests, l’analyse web et la cybersécurité.
+Navigateur sécurisé basé Firejail et un VPN, conçu pour les tests d'intrusion, l’analyse web et la cybersécurité.
 
 ---
 
@@ -36,7 +36,6 @@ Navigateur sécurisé via Firejail + VPN, pensé pour les pentests, l’analyse 
 - [Configuration mise en place](#configuration-mise-en-place)
 - [Prérequis](#prérequis)
 - [Commandes à exécuter](#commandes-à-exécuter)
-- [Vérification après installation](#vérification-après-installation)
 - [VPN : ce qu’il faut comprendre](#vpn--ce-quil-faut-comprendre)
 - [À savoir](#à-savoir)
 - [Licence](#licence)
@@ -46,25 +45,25 @@ Navigateur sécurisé via Firejail + VPN, pensé pour les pentests, l’analyse 
 ## Avertissement
 
 **Usage strictement pédagogique.**
-L’auteure décline toute responsabilité en cas d’usage malveillant ou illégal.
+L’auteure décline toute responsabilité en cas d’utilisation malveillante ou illégale.
 
 ---
 
 ## Objectif
 
 Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, dans le cadre :
-- de tests de sécurité (pentest),
+- de tests de sécurité (pentests),
 - d’analyses web ou réseau,
-- de formation à la cybersécurité.
+- de formations à la cybersécurité.
 
 ---
 
 ## Fonctionnement global
 
 - **VPN** : chiffre le trafic et masque l’adresse IP réelle.
-- **Firejail** : sandbox Linux restreignant l’environnement de Firefox.
+- **Firejail** : bac de sable (sandbox) Linux restreignant l’environnement de Firefox.
 - **Option `--private`** : empêche tout accès aux fichiers personnels.
-- **Alias `safefox`** : permet un lancement rapide via terminal.
+- **Alias `safefox`** : permet un lancement rapide depuis terminal.
 
 ---
 
@@ -83,11 +82,11 @@ Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, 
 ## Prérequis
 
 - **Système** : Kali Linux, Debian ou Ubuntu
-- **Logiciels** :
+- **Logiciels nécessaires** :
 - `firejail`
 - `firefox-esr`
-- un **client VPN actif** (ex : NordVPN, ProtonVPN)
-- **Accès sudo** requis pour l'installation
+- Un **client VPN actif** (ex : NordVPN, ProtonVPN)
+- Les **droits sudo** sont requis pour l'installation
 
 ---
 
@@ -106,11 +105,11 @@ chmod +x install-safefox.sh
 3. Lancer le script
 ./install-safefox.sh
 
-💡 Le script installe firejail, firefox-esr et configure l’alias safefox.
+💡 Le script installe Firejail, Firefox-Esr et configure l’alias safefox.
 
 Vérification après installation
 
-Après l’installation, ouvrez un nouveau terminal ou rechargez le fichier de configuration :
+Une fois l’installation terminée, ouvrez un nouveau terminal ou rechargez le fichier de configuration pour activer l'alias safefox :
 
 source ~/.zshrc
 
@@ -125,21 +124,20 @@ safefox
  ## VPN : ce qu’il faut comprendre
 
 
-Le script ne configure pas de VPN. Il suppose que vous utilisez déjà un VPN fonctionnel.
+Ce script ne configure pas de VPN. Il part du principe que vous disposez déjà un VPN fonctionnel.
 
 
-Deux possibilités :
+Deux scénarios possibles :
 
-1. VPN sur l’ordinateur hôte :
-La VM (ex. Kali VirtualBox) utilise Internet via NAT.
+1. VPN installé sur l’ordinateur hôte :
+- La machine virtuelle (ex. Kali VirtualBox) accède à  Internet via NAT.
+- Dans ce cas, le  VPN de l’hôte protège également la VM.
 
-Le VPN de l’hôte couvre aussi la VM.
 
-
-2. VPN directement installé dans la VM :
+2. VPN installé directement dans la VM :
 L’utilisateur lance le VPN depuis Kali.
 
-Commande exemple :
+Commande de exemple :
 
 nordvpn connecte
 
@@ -149,15 +147,15 @@ Dans tous les cas, le VPN doit être activé avant d’utiliser safefox.
 
 # À savoir
 
-Le script vérifie que vous n’êtes pas en root
+Le script vérifie que vous n’êtes pas en tant que root
 
-Il détecte automatiquement .bashrc ou .zshrc
+Il détecte automatiquement le fichier de configuration .bashrc ou .zshrc
 
-Il ajoute l’alias safefox : firejail --private firefox
+Il ajoute l’alias safefox='firejail --private firefox'
 
-Firefox s’ouvre sans cookies ni historique
+Firefox est lancé sans cookies ni historique (mode isolé)
 
-Pour des raisons de sécurité, il est conseillé d’utiliser un VPN sérieux et fiable
+Pour garantir une navigations sécuritée, il est recommandé d’utiliser un VPN fiable.
 
 ---
 
@@ -166,6 +164,13 @@ Pour des raisons de sécurité, il est conseillé d’utiliser un VPN sérieux e
 Projet sous licence MIT
 
 Autrice : Virginie
+
+
+
+
+
+
+
 
 
 
