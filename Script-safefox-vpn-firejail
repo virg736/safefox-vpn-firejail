@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# --------------------------------------------
+# Script d’installation SafeFox
+# Installe firejail, Firefox et crée l’alias safefox
+# Compatible Debian / Ubuntu / Kali
+# --------------------------------------------
+
+echo "🔐 [SafeFox] Démarrage de l'installation..."
+
+# Vérifie si l'utilisateur est root (Kali peut l'être par défaut)
+if [ "$EUID" -eq 0 ]; then
+echo "⚠  Vous exécutez ce script en tant que root."
+echo "Kali Linux utilise parfois root par défaut."
+read -p "Voulez-vous continuer ? (y/n) : " confirm
+if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
+echo "  Installation annulée par l'utilisateur."
+exit 1
+fi
+fi
+
+# Mise à jour des paquets
+echo " Mise à jour du système..."
+sudo apt update -y
+
+# Installation de firejail et firefox
+echo " Installation de firejail et firefox-esr..."
+sudo apt install -y firejail firefox-esr
+
+# Détection du fichier de configuration du shell
+if [ -f "$HOME/.zshrc" ]; then
+SHELL_RC="$HOME/.zshrc"
+elif [ -f "$HOME/.bashrc" ]; then
+SHELL_RC="$HOME/.bashrc"
+else
+echo "❗ Fichier .bashrc ou .zshrc introuvable"
+exit 1
+fi
+
+# Ajout de l’alias safefox si non existant
+if grep -q "alias safefox=" "$SHELL_RC"; then
+echo " Alias 'safefox' déjà présent dans $SHELL_RC"
+else
+echo "⚙️ Ajout de l’alias safefox..."
+echo "alias safefox='firejail --private firefox'" >> "$SHELL_RC"
+echo " Alias ajouté avec succès."
+fi
+
+# Instruction finale à l'utilisateur
+echo " Ouvrez un nouveau terminal ou tapez :"
+echo " source $SHELL_RC"
+echo "pour que la commande 'safefox' soit activée."
+
+echo " Installation terminée. Lancez : safefox"
