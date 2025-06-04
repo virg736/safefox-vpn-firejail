@@ -161,19 +161,21 @@ Pour garantir une navigations sécuritée, il est recommandé d’utiliser un VP
 
  ## Licence
 
-Projet sous licence MIT
+le Script est publié sous la licence MIT
 
-## 7. Avertissement légal
-
- Ce projet est exclusivement destiné à des fins éducatives, dans le cadre de la formation à la cybersécurité.
+Ce projet est exclusivement destiné à des fins éducatives, dans le cadre d'une formation en cybersécurité.
  L’auteure ne cautionne ni n’autorise l’utilisation de ces techniques en dehors d’un cadre légal strictement défini.
  Toute utilisation non autorisée est interdite et relève de la seule responsabilité de l’utilisateur.
 
+---
 
-## 8. Auteur / Droits
+##  Auteur / Droits
 
-© 2025 Virginie Lechene — Tous droits réservés.
-Reproduction interdite sans autorisation.
+## Droits sur les contenus visuels
+
+Les visuels, images ou illustrations présents dans ce dépôt sont la propriété exclusive de l’auteure.
+Toute reproduction, modification ou réutilisation sans accord préalable est strictement interdite.
+© 2025 Virginie Lechene – Tous droits réservés.
 
 
 
