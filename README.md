@@ -73,8 +73,82 @@ Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, 
 ### 1. Télécharger le script
 
 En tant qu’utilisateur (non-root) :
-```bash
+
 curl -L https://raw.githubusercontent.com/virg736/safefox-vpn-firejail/main/Script-safefox-vpn-firejail -o install-safefox.sh
+
+---
+
+2. Rendre le script exécutable
+chmod +x install-safefox.sh
+
+3. Lancer le script
+./install-safefox.sh
+
+💡 Le script installe firejail, firefox-esr et configure l’alias safefox.
+
+Vérification après installation
+
+Après l’installation, ouvrez un nouveau terminal ou rechargez le fichier de configuration :
+
+source ~/.zshrc
+
+# ou
+source ~/.bashrc
+
+Ensuite, lancez :
+safefox
+
+
+
+VPN : ce qu’il faut comprendre
+
+
+Le script ne configure pas de VPN. Il suppose que vous utilisez déjà un VPN fonctionnel.
+
+
+
+Deux possibilités :
+
+
+1. VPN sur l’ordinateur hôte :
+La VM (ex. Kali VirtualBox) utilise Internet via NAT.
+
+Le VPN de l’hôte couvre aussi la VM.
+
+
+
+2. VPN directement installé dans la VM :
+L’utilisateur lance le VPN depuis Kali.
+
+Commande exemple :
+
+nordvpn connecte
+
+Dans tous les cas, le VPN doit être activé avant d’utiliser safefox.
+
+À savoir
+Le script vérifie que vous n’êtes pas en root
+
+Il détecte automatiquement .bashrc ou .zshrc
+
+Il ajoute l’alias safefox : firejail --private firefox
+
+Firefox s’ouvre sans cookies ni historique
+
+Pour des raisons de sécurité, il est conseillé d’utiliser un VPN sérieux et fiable
+
+
+Licence
+
+
+Projet sous licence MIT
+
+Autrice : Virginie
+
+
+
+
+
 
 
 
