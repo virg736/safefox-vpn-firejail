@@ -163,7 +163,19 @@ Pour garantir une navigations sécuritée, il est recommandé d’utiliser un VP
 
 Projet sous licence MIT
 
-Autrice : Virginie
+## 7. Avertissement légal
+
+ Ce projet est exclusivement destiné à des fins éducatives, dans le cadre de la formation à la cybersécurité.
+ L’auteure ne cautionne ni n’autorise l’utilisation de ces techniques en dehors d’un cadre légal strictement défini.
+ Toute utilisation non autorisée est interdite et relève de la seule responsabilité de l’utilisateur.
+
+
+## 8. Auteur / Droits
+
+© 2025 Virginie Lechene — Tous droits réservés.
+Reproduction interdite sans autorisation.
+
+
 
 
 
