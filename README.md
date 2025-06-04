@@ -155,10 +155,6 @@ nordvpn connecte
 
 Dans tous les cas, le VPN doit être activé avant d’utiliser safefox.
 
----
-
-# À savoir
-
 Le script vérifie que vous n’êtes pas en tant que root
 
 Il détecte automatiquement le fichier de configuration .bashrc ou .zshrc
@@ -168,6 +164,37 @@ Il ajoute l’alias safefox='firejail --private firefox'
 Firefox est lancé sans cookies ni historique (mode isolé)
 
 Pour garantir une navigations sécuritée, il est recommandé d’utiliser un VPN fiable.
+
+---
+
+# À savoir
+
+## 🔍 Pourquoi cette méthode est utilisée ?
+
+Cette méthode est utilisée par les **professionnels de la cybersécurité** et les **hackers éthiques** dans un objectif précis :
+
+ **Comprendre les techniques d’attaque pour mieux s’en défendre.**
+
+Elle permet de :
+
+- Analyser des sites piégés ou malveillants sans exposer son système
+- Étudier le comportement d’un site suspect (scripts, redirections, trackers…)
+- Reproduire des scénarios d’attaque dans un environnement isolé
+- Se former, expérimenter ou sensibiliser sans prise de risque
+
+Elle combine deux outils puissants :
+
+- 🔒 **Firejail** : isole complètement le navigateur (aucun accès aux fichiers ni à l’environnement utilisateur)
+- 🛡️ **VPN** : chiffre le trafic et masque l’identité réseau
+
+C’est une approche préventive, utilisée dans les audits, la recherche en sécurité, les formations et les environnements d’apprentissage.
+
+🔧 Il existe aussi d'autres outils qui répondent aux mêmes besoins, comme :
+**AppArmor**, **SELinux**, **Docker**, ou encore les **machines virtuelles**, souvent utilisés selon les cas d’usage.
+
+> ⚠️ **Ce projet est à but éducatif uniquement.**
+> Toute utilisation doit rester dans un cadre légal et responsable.
+
 
 ---
 
