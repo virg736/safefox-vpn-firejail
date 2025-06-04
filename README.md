@@ -65,6 +65,12 @@ Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, 
 - **Option `--private`** : empêche tout accès aux fichiers personnels.
 - **Alias `safefox`** : permet un lancement rapide depuis terminal.
 
+<p align="center">
+<img src="https://github.com/virg736/safefox-vpn-firejail/blob/main/firefox4.PNG?raw=true" alt="Schéma SafeFox VPN + Firejail" style="max-width: 100%; height: auto;" />
+</p>
+
+<p align="center"><i>Illustration du flux sécurisé : VPN → Firejail → Firefox → Site web potentiellement malveillant</i></p>
+
 ---
 
 ## Configuration mise en place
