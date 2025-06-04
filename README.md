@@ -59,6 +59,9 @@ Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, 
 <p align="center">
 <img src="Firejail.PNG" alt="Schéma Safefox" width="600"/>
 </p>
+<p align="center">
+<em>Figure : Schéma de fonctionnement de Safefox (VPN → Firejail → Web)</em>
+</p>
 
 ---
 
