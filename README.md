@@ -15,7 +15,6 @@ Navigateur sécurisé via Firejail + VPN, pensé pour les pentests, l’analyse 
 - [Vérification après installation](#vérification-après-installation)
 - [VPN : ce qu’il faut comprendre](#vpn--ce-quil-faut-comprendre)
 - [À savoir](#à-savoir)
-- [Structure du projet](#structure-du-projet)
 - [Licence](#licence)
 
 ---
@@ -76,7 +75,6 @@ En tant qu’utilisateur (non-root) :
 
 curl -L https://raw.githubusercontent.com/virg736/safefox-vpn-firejail/main/Script-safefox-vpn-firejail -o install-safefox.sh
 
----
 
 2. Rendre le script exécutable
 chmod +x install-safefox.sh
@@ -98,23 +96,20 @@ source ~/.bashrc
 Ensuite, lancez :
 safefox
 
+---
 
-
-VPN : ce qu’il faut comprendre
+ # VPN : ce qu’il faut comprendre
 
 
 Le script ne configure pas de VPN. Il suppose que vous utilisez déjà un VPN fonctionnel.
 
 
-
 Deux possibilités :
-
 
 1. VPN sur l’ordinateur hôte :
 La VM (ex. Kali VirtualBox) utilise Internet via NAT.
 
 Le VPN de l’hôte couvre aussi la VM.
-
 
 
 2. VPN directement installé dans la VM :
@@ -126,7 +121,10 @@ nordvpn connecte
 
 Dans tous les cas, le VPN doit être activé avant d’utiliser safefox.
 
-À savoir
+---
+
+# À savoir
+
 Le script vérifie que vous n’êtes pas en root
 
 Il détecte automatiquement .bashrc ou .zshrc
@@ -137,9 +135,9 @@ Firefox s’ouvre sans cookies ni historique
 
 Pour des raisons de sécurité, il est conseillé d’utiliser un VPN sérieux et fiable
 
+---
 
-Licence
-
+ # Licence
 
 Projet sous licence MIT
 
