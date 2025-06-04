@@ -56,6 +56,8 @@ Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, 
 - d’analyses web ou réseau,
 - de formations à la cybersécurité.
 
+  ![Schéma de fonctionnement Safefox](Firejail.PNG)
+
 ---
 
 ## Fonctionnement global
