@@ -1,3 +1,27 @@
+<h1 align="center">SafeFox VPN Firejail</h1>
+
+<p align="center">
+<img src="firefox.PNG" alt="Illustration SafeFox VPN" style="max-width: 100%; height: auto;" />
+</p>
+
+<p align="center">
+<a href="https://opensource.org/licenses/MIT">
+<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Licence MIT" />
+</a>
+<img src="https://img.shields.io/badge/stabilité-stable-brightgreen" alt="Stabilité stable" />
+</p>
+
+<p align="center"><i>© 2025 Virginie Lechene — Tous droits réservés</i><br/>
+<i>Reproduction interdite sans autorisation. Usage pédagogique uniquement.</i></p>
+
+<p align="center">
+<a href="https://creativecommons.org/licenses/by-nd/4.0/">
+<img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" alt="Licence CC BY-ND 4.0" />
+</a>
+</p>
+
+---
+
 # SafeFox VPN Firejail
 
 Navigateur sécurisé via Firejail + VPN, pensé pour les pentests, l’analyse web et la cybersécurité.
