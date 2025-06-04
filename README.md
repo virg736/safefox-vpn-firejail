@@ -14,10 +14,10 @@ Navigateur sécurisé via Firejail+VPN, pensépour les pentest, l'analyse web et
 
 # Configuration mise en place
 
-| Élément                           Statut    
---------------------------------------|------------
-   VPN actif                          ✅          
-   Firejail installé                  ✅          
-   Firefox isolé via `--private`      ✅          
-   Alias `safefox` fonctionnel        ✅          
-   Utilisateur non-root               ✅          
+  Élément                            
+ 
+ VPN actif  ✅          
+ Firejail installé ✅          
+ Firefox isolé via `--private`✅          
+ Alias `safefox` fonctionnel ✅          
+  Utilisateur non-root ✅          
