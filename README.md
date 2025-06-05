@@ -1,5 +1,8 @@
-![Bandit](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml/badge.svg)
+# SafeFox VPN Firejail
 
+[![ShellCheck](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/shellcheck.yml)
+[![Bandit](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml/badge.svg)](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml)
+[![CodeQL](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/codeql-analysis.yml)
 
 
 <h1 align="center">SafeFox VPN Firejail</h1>
