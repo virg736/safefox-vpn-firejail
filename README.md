@@ -1,4 +1,4 @@
-[![Bandit](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml/badge.svg)](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml)
+[![ShellCheck](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/shellcheck.yml)
 
 
 <h1 align="center">SafeFox VPN Firejail</h1>
