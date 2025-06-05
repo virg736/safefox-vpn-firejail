@@ -1,3 +1,5 @@
+[![Bandit](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml/badge.svg)](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml)
+
 
 <h1 align="center">SafeFox VPN Firejail</h1>
 
