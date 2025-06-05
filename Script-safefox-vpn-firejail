@@ -62,3 +62,5 @@ echo " source $SHELL_RC"
 echo "pour que la commande 'safefox' soit activée."
 
 echo "Installation terminée. Lancez : safefox"
+
+# Relance ShellCheck
