@@ -1,16 +1,13 @@
 name: ShellCheck
 
-permissions:
-  contents: read
-  security-events: write
-
 on:
   push:
-    paths:
-      - '**/*.sh'
+    branches: [ main ]
   pull_request:
-    paths:
-      - '**/*.sh'
+    branches: [ main ]
+
+permissions:
+  contents: read
 
 jobs:
   shellcheck:
@@ -19,11 +16,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install ShellCheck
-        run: sudo apt-get update && sudo apt-get install -y shellcheck
-
-      - name: Run ShellCheck on all .sh files
-        run: find . -type f -name "*.sh" -exec shellcheck {} +
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@1.1.0
 
 
 
