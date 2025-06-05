@@ -1,3 +1,6 @@
+![Bandit](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/bandit.yml/badge.svg)
+
+
 
 <h1 align="center">SafeFox VPN Firejail</h1>
 
