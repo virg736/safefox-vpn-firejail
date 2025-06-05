@@ -8,6 +8,7 @@
 # en cas d’usage malveillant ou illégal.
 
 
+
 #!/bin/bash
 
 # --------------------------------------------
@@ -64,3 +65,6 @@ echo "pour que la commande 'safefox' soit activée."
 echo "Installation terminée. Lancez : safefox"
 
 # Relance ShellCheck
+
+
+
