@@ -2,6 +2,27 @@
 ![Release](https://img.shields.io/github/v/release/virg736/safefox-vpn-firejail?label=version&style=flat-square)
 
 
+<h1 align="center">SafeFox VPN Firejail</h1>
+
+<p align="center">
+<img src="Firejail.jpg" alt="Illustration SafeFox VPN" style="max-width: 100%; height: auto;" />
+</p>
+
+<p align="center">
+<a href="https://opensource.org/licenses/MIT">
+<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="Licence MIT">
+</a>
+<img src="https://img.shields.io/badge/stabilité-stable-brightgreen.svg" alt="Stable">
+</p>
+
+<p align="center"><strong>© 2025 Virginie Lechene — Tous droits réservés</strong><br>
+<em>Reproduction interdite sans autorisation. Usage pédagogique uniquement.</em></p>
+
+<p align="center">
+<img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" alt="Licence Creative Commons BY-ND">
+</p>
+
+<p align="center"><strong> Image protégée – Propriété exclusive</strong></p>
 
 
 ---
