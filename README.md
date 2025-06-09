@@ -22,7 +22,7 @@
 <img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" alt="Licence CC BY-ND 4.0" />
 </a>
 </p>
-
+📸 **Image protégée — Propriété exclusive**
 ---
 
 # SafeFox VPN Firejail
