@@ -1,6 +1,5 @@
 [![ShellCheck](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/shellcheck.yml/badge.svg)](https://github.com/virg736/safefox-vpn-firejail/actions/workflows/shellcheck.yml)
-
-
+![Release](https://img.shields.io/github/v/release/virg736/safefox-vpn-firejail?label=version&style=flat-square)
 
 <h1 align="center">SafeFox VPN Firejail</h1>
 
