@@ -67,7 +67,7 @@ Fournir une méthode simple pour lancer un navigateur dans un environnement isol
 <img src="Firejail.PNG" alt="Schéma Safefox" width="600"/>
 </p>
 <p align="center">
-<em>Figure : Schéma de fonctionnement de Safefox (VPN → Firejail → Web)</em>
+<em>Figure  : *Figure : Schéma conceptuel des couches de protection de SafeFox (VPN + Firejail + navigateur)</em>
 </p>
 
 ---
