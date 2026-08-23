@@ -129,10 +129,11 @@ git clone https://github.com/virg736/safefox-vpn-firejail.git
 cd safefox-vpn-firejail   
 
 2. Rendre le script exécutable
-chmod +x install-safefox.sh
+chmod +x Script-safefox-vpn-firejail   
+./Script-safefox-vpn-firejail   
 
-3. Lancer le script
-./install-safefox.sh
+3. Lancer le script   
+./Script-safefox-vpn-firejail   
 
 💡 Le script installe Firejail et Firefox ESR, puis configure l’alias safefox.
 
