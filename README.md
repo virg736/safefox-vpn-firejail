@@ -121,10 +121,12 @@ Fournir une méthode simple pour lancer un navigateur dans un environnement isol
 
 En tant qu'utilisateur **non-root** :
 
+## Commandes à exécuter
 
-curl -fL \
-  https://raw.githubusercontent.com/virg736/safefox-vpn-firejail/main/Script-safefox-vpn-firejail \
-  -o install-safefox.sh
+### 1. Cloner le dépôt
+
+git clone https://github.com/virg736/safefox-vpn-firejail.git
+cd safefox-vpn-firejail
 
 2. Rendre le script exécutable
 chmod +x install-safefox.sh
