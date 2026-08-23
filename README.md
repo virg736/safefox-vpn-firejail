@@ -138,12 +138,12 @@ Vérification après installation
 
 Une fois l’installation terminée, ouvrez un nouveau terminal ou rechargez le fichier de configuration de votre shell :
 
-source ~/.zshrc
-ou
-source ~/.bashrc
+source ~/.zshrc   
+ou   
+source ~/.bashrc   
 
-Ensuite, lancez :
-safefox
+Ensuite, lancez :   
+safefox   
 
 ---
 
