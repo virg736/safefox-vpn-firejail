@@ -212,9 +212,13 @@ Ce projet est destiné à des usages pédagogiques, défensifs et à des tests d
 - de tests d’intrusion réalisés avec les autorisations nécessaires ;
 - d’analyses réseau dans un environnement contrôlé et autorisé.
 
-> ⚠️ Toute utilisation doit respecter la législation applicable ainsi que les autorisations nécessaires.  
+> ⚠️ Toute utilisation doit respecter la législation applicable ainsi que les autorisations nécessaires.
+>
+> L’auteure n’autorise ni ne cautionne l’utilisation de ce projet à des fins malveillantes, illégales ou non autorisées.
+>
+> L’utilisateur demeure responsable de l’usage qu’il fait de ce projet et de ses conséquences.
+>
 > Ce projet ne constitue pas une autorisation d’accéder à des systèmes, réseaux, comptes ou données appartenant à des tiers.
-
 
 ---
 
