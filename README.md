@@ -57,9 +57,10 @@ Ce projet ne constitue pas une autorisation d'accéder à des systèmes, réseau
 
 ## Objectif
 
-Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, dans le cadre :
-- de tests de sécurité (pentests),
-- d’analyses web ou réseau,
+Fournir une méthode simple pour lancer un navigateur dans un environnement isolé, notamment dans le cadre :
+
+- de tests de sécurité réalisés avec les autorisations nécessaires ;
+- d'analyses web ou réseau ;
 - de formations à la cybersécurité.
 
 <p align="center">
@@ -73,10 +74,14 @@ Fournir une méthode simple pour lancer un navigateur **sécurisé et isolé**, 
 
 ## Fonctionnement global
 
-- **VPN** : chiffre le trafic et masque l’adresse IP réelle.
-- **Firejail** : bac de sable (sandbox) Linux restreignant l’environnement de Firefox.
-- **Option `--private`** : empêche tout accès aux fichiers personnels.
-- **Alias `safefox`** : permet un lancement rapide depuis terminal.
+- **VPN :** chiffre le trafic entre l'appareil et le serveur VPN et masque l'adresse IP publique de l'utilisateur aux services consultés.
+
+- **Firejail :** bac à sable (*sandbox*) Linux permettant de confiner Firefox et de limiter son accès aux ressources du système.
+
+- **Option `--private` :** lance le navigateur avec un répertoire personnel temporaire et isolé. Les données créées dans cet environnement ne persistent pas après la fermeture du bac à sable.
+
+- **Alias `safefox` :** permet un lancement rapide depuis le terminal.
+
 
 <p align="center">
 <img src="https://github.com/virg736/safefox-vpn-firejail/blob/main/firefox4.PNG?raw=true" alt="Schéma SafeFox VPN + Firejail" style="max-width: 100%; height: auto;" />
