@@ -149,35 +149,28 @@ safefox
 
  ## VPN : ce qu’il faut comprendre
 
+SafeFox ne configure pas et n’installe pas de VPN.
 
-Ce script ne configure pas de VPN. Il part du principe que vous disposez déjà un VPN fonctionnel.
+Le projet part du principe que vous disposez déjà d’un VPN fonctionnel si vous souhaitez en utiliser un avec SafeFox.
+
+### Deux scénarios sont possibles
+
+#### 1. VPN installé sur l’ordinateur hôte
+
+Si Kali Linux ou Debian est exécuté dans une machine virtuelle utilisant un réseau NAT, le trafic de la machine virtuelle passe généralement par la connexion réseau de l’hôte.
+
+Selon le logiciel VPN utilisé et sa configuration, le trafic de la machine virtuelle peut également être acheminé par le VPN de l’hôte.
+
+> ⚠️ Il est recommandé de vérifier l’adresse IP publique depuis la machine virtuelle avant d’utiliser SafeFox.
+
+#### 2. VPN installé directement dans la machine virtuelle
+
+Le VPN peut également être installé et lancé directement depuis Kali Linux ou Debian.
+
+Exemple avec un client VPN compatible :
 
 
-Deux scénarios possibles :
-
-1. VPN installé sur l’ordinateur hôte :
-- La machine virtuelle (ex. Kali VirtualBox) accède à  Internet via NAT.
-- Dans ce cas, le  VPN de l’hôte protège également la VM.
-
-
-2. VPN installé directement dans la VM :
-L’utilisateur lance le VPN depuis Kali.
-
-Commande de exemple :
-
-nordvpn connecte
-
-Dans tous les cas, le VPN doit être activé avant d’utiliser safefox.
-
-Le script vérifie que vous n’êtes pas en tant que root
-
-Il détecte automatiquement le fichier de configuration .bashrc ou .zshrc
-
-Il ajoute l’alias safefox='firejail --private firefox'
-
-Firefox est lancé sans cookies ni historique (mode isolé)
-
-Pour garantir une navigations sécuritée, il est recommandé d’utiliser un VPN fiable.
+nordvpn connect
 
 ---
 
