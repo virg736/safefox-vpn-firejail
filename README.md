@@ -15,7 +15,7 @@
 <img src="https://img.shields.io/badge/stabilité-stable-brightgreen.svg" alt="Stable">
 </p>
 
-<p align="center"><strong>© 2025 Virginie Lechene.</em></p>
+<p align="center"><strong>© 2026 Virginie Lechene.</em></p>
 
 <p align="center">
 <img src="https://licensebuttons.net/l/by-nd/4.0/88x31.png" alt="Licence Creative Commons BY-ND">
@@ -206,13 +206,15 @@ Le script est publié sous la licence **MIT**.
 
 ## À propos de l’usage
 
-Ce projet est destiné **exclusivement à des fins pédagogiques**, notamment dans le cadre :
-- d’une formation en cybersécurité,
-- de tests d’intrusion légaux (pentest),
-- d’analyses réseau dans un environnement contrôlé.
+Ce projet est destiné à des usages pédagogiques, défensifs et à des tests de sécurité autorisés, notamment dans le cadre :
 
-> L’auteure **ne cautionne ni n’autorise** l’utilisation de ce script en dehors d’un cadre légal strictement défini.
-> Toute utilisation non conforme est interdite et relève **uniquement de la responsabilité de l’utilisateur**.
+- d’une formation en cybersécurité ;
+- de tests d’intrusion réalisés avec les autorisations nécessaires ;
+- d’analyses réseau dans un environnement contrôlé et autorisé.
+
+> ⚠️ Toute utilisation doit respecter la législation applicable ainsi que les autorisations nécessaires.  
+> Ce projet ne constitue pas une autorisation d’accéder à des systèmes, réseaux, comptes ou données appartenant à des tiers.
+
 
 ---
 
