@@ -1,70 +1,188 @@
+#!/bin/bash
+
 # ===============================================================
-# Script Safefox VPN Firejail 
+# SafeFox VPN Firejail
 # Auteur : Virginie Lechene
 # Licence : MIT
 #
-# ⚠️ AVERTISSEMENT :
-# Usage strictement pédagogique. L’auteure décline toute responsabilité
-# en cas d’usage malveillant ou illégal.
+# ⚠️ AVERTISSEMENT
+# Ce projet a été conçu principalement dans un objectif
+# pédagogique et défensif.
+#
+# Toute utilisation doit respecter la législation applicable,
+# les autorisations nécessaires ainsi que les règles des
+# systèmes et réseaux concernés.
+#
+# Ce script ne configure pas de VPN.
+# Il suppose qu'un VPN fonctionnel est déjà disponible
+# lorsque l'utilisateur souhaite l'utiliser avec SafeFox.
+# ===============================================================
 
+set -e
 
+echo
+echo "=============================================="
+echo "        Installation de SafeFox"
+echo "=============================================="
+echo
 
-#!/bin/bash
+# ---------------------------------------------------------------
+# Vérification de l'utilisateur
+# ---------------------------------------------------------------
 
-# --------------------------------------------
-# Script d’installation SafeFox
-# Installe firejail, Firefox et crée l’alias safefox
-# Compatible Debian / Ubuntu / Kali
-# --------------------------------------------
-
-echo "[SafeFox] Démarrage de l'installation..."
-
-# Vérifie si l'utilisateur est root (Kali peut l'être par défaut)
 if [ "$EUID" -eq 0 ]; then
-echo "Vous exécutez ce script en tant que root."
-echo "Kali Linux utilise parfois root par défaut."
-read -p "Voulez-vous continuer ? (y/n) : " confirm
-if [[ "$confirm" != "y" && "$confirm" != "Y" ]]; then
-echo "Installation annulée par l'utilisateur."
-exit 1
-fi
+    echo "Erreur : ce script ne doit pas être exécuté en tant que root."
+    echo
+    echo "Utilisez un compte utilisateur normal disposant des droits sudo."
+    exit 1
 fi
 
-# Mise à jour des paquets
-echo "Mise à jour du système..."
-sudo apt update -y
+# ---------------------------------------------------------------
+# Vérification de sudo
+# ---------------------------------------------------------------
 
-# Installation de firejail et firefox
-echo "Installation de firejail et firefox-esr..."
-sudo apt install -y firejail firefox-esr
+if ! command -v sudo >/dev/null 2>&1; then
+    echo "Erreur : la commande sudo est nécessaire."
+    exit 1
+fi
 
+echo "[SafeFox] Vérification des droits sudo..."
+
+if ! sudo -v; then
+    echo "Erreur : impossible d'obtenir les droits sudo."
+    exit 1
+fi
+
+# ---------------------------------------------------------------
+# Informations système
+# ---------------------------------------------------------------
+
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+
+    echo "[SafeFox] Système détecté : ${PRETTY_NAME:-Linux}"
+
+    case "${ID:-}" in
+        kali|debian)
+            ;;
+        *)
+            echo
+            echo "Attention : ce script est principalement prévu pour"
+            echo "Kali Linux et Debian."
+            echo
+            ;;
+    esac
+fi
+
+# ---------------------------------------------------------------
+# Mise à jour de la liste des paquets
+# ---------------------------------------------------------------
+
+echo
+echo "[SafeFox] Mise à jour de la liste des paquets..."
+
+sudo apt-get update
+
+# ---------------------------------------------------------------
+# Installation des dépendances
+# ---------------------------------------------------------------
+
+echo
+echo "[SafeFox] Installation de Firejail et Firefox ESR..."
+
+sudo apt-get install -y firejail firefox-esr
+
+# ---------------------------------------------------------------
+# Vérification des programmes installés
+# ---------------------------------------------------------------
+
+if ! command -v firejail >/dev/null 2>&1; then
+    echo "Erreur : Firejail n'a pas été trouvé après l'installation."
+    exit 1
+fi
+
+if ! command -v firefox-esr >/dev/null 2>&1; then
+    echo "Erreur : Firefox ESR n'a pas été trouvé après l'installation."
+    exit 1
+fi
+
+FIREFOX_PATH="$(command -v firefox-esr)"
+
+echo
+echo "[SafeFox] Firejail détecté : $(command -v firejail)"
+echo "[SafeFox] Firefox ESR détecté : $FIREFOX_PATH"
+
+# ---------------------------------------------------------------
 # Détection du fichier de configuration du shell
-if [ -f "$HOME/.zshrc" ]; then
-SHELL_RC="$HOME/.zshrc"
-elif [ -f "$HOME/.bashrc" ]; then
-SHELL_RC="$HOME/.bashrc"
-else
-echo "Fichier .bashrc ou .zshrc introuvable"
-exit 1
-fi
+# ---------------------------------------------------------------
 
-# Ajout de l’alias safefox si non existant
-if grep -q "alias safefox=" "$SHELL_RC"; then
-echo "Alias 'safefox' déjà présent dans $SHELL_RC"
-else
-echo "Ajout de l’alias safefox..."
-echo "alias safefox='firejail --private firefox'" >> "$SHELL_RC"
-echo "Alias ajouté avec succès."
-fi
+echo
+echo "[SafeFox] Détection du shell utilisateur..."
 
-# Instruction finale à l'utilisateur
-echo "Ouvrez un nouveau terminal ou tapez :"
-echo " source $SHELL_RC"
-echo "pour que la commande 'safefox' soit activée."
+case "$(basename "${SHELL:-}")" in
+    zsh)
+        SHELL_RC="$HOME/.zshrc"
+        ;;
+    bash)
+        SHELL_RC="$HOME/.bashrc"
+        ;;
+    *)
+        if [ -f "$HOME/.zshrc" ]; then
+            SHELL_RC="$HOME/.zshrc"
+        elif [ -f "$HOME/.bashrc" ]; then
+            SHELL_RC="$HOME/.bashrc"
+        else
+            echo "Erreur : aucun fichier .zshrc ou .bashrc n'a été trouvé."
+            exit 1
+        fi
+        ;;
+esac
 
-echo "Installation terminée. Lancez : safefox"
+echo "[SafeFox] Fichier de configuration : $SHELL_RC"
 
-# Relance ShellCheck
+# ---------------------------------------------------------------
+# Configuration de l'alias SafeFox
+# ---------------------------------------------------------------
 
+echo
+echo "[SafeFox] Configuration de l'alias safefox..."
 
+# Supprime une éventuelle ancienne définition de l'alias.
+sed -i '/^[[:space:]]*alias safefox=/d' "$SHELL_RC"
+
+# Ajoute la nouvelle définition.
+echo "alias safefox='firejail --private $FIREFOX_PATH'" >> "$SHELL_RC"
+
+echo "[SafeFox] Alias safefox configuré avec succès."
+
+# ---------------------------------------------------------------
+# Résumé
+# ---------------------------------------------------------------
+
+echo
+echo "=============================================="
+echo "        Installation terminée"
+echo "=============================================="
+echo
+echo "SafeFox utilise :"
+echo
+echo "  - Firejail pour isoler Firefox ESR"
+echo "  - l'option --private pour créer un environnement"
+echo "    utilisateur temporaire et isolé"
+echo
+echo "Le script ne configure pas votre VPN."
+echo "Si vous souhaitez utiliser un VPN, activez-le avant"
+echo "de lancer SafeFox."
+echo
+echo "Pour activer immédiatement l'alias :"
+echo
+echo "    source \"$SHELL_RC\""
+echo
+echo "Puis lancez :"
+echo
+echo "    safefox"
+echo
+echo "SafeFox doit être exécuté avec un utilisateur normal,"
+echo "et non en tant que root."
+echo
 
