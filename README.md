@@ -67,7 +67,7 @@ Fournir une méthode simple pour lancer un navigateur dans un environnement isol
 <img src="Firejail.PNG" alt="Schéma Safefox" width="600"/>
 </p>
 <p align="center">
-<em>Figure  : *Figure : Schéma conceptuel des couches de protection de SafeFox (VPN + Firejail + navigateur)</em>
+<em>Figure  : Schéma conceptuel des couches de protection de SafeFox (VPN + Firejail + navigateur)</em>
 </p>
 
 ---
@@ -93,25 +93,27 @@ Fournir une méthode simple pour lancer un navigateur dans un environnement isol
 ## Configuration mise en place
 
 | Élément | Statut attendu |
-|---------------------------------|----------------|
+|---|---|
 | VPN actif | ✅ |
 | Firejail installé | ✅ |
-| Firefox installé | ✅ |
+| Firefox ESR installé | ✅ |
 | Alias `safefox` fonctionnel | ✅ |
-| Exécution en utilisateur normal| ✅ |
+| Exécution en utilisateur normal | ✅ |
 
 ---
 
 ## Prérequis
 
-- **Système** : Kali Linux, Debian ou Ubuntu
-- **Logiciels nécessaires** :
-- `firejail`
-- `firefox-esr`
-- Un **client VPN actif** (ex : NordVPN, ProtonVPN)
-- Les **droits sudo** sont requis pour l'installation
+- **Système :** Kali Linux ou Debian
+- **Logiciels nécessaires :**
+  - `firejail`
+  - `firefox-esr`
+  - un client VPN fonctionnel (ex. : NordVPN, Proton VPN)
+- Les droits `sudo` sont requis pour l'installation des dépendances.
+- SafeFox doit ensuite être exécuté avec un compte utilisateur normal, et non en tant que `root`.
 
 ---
+
 
 ## Commandes à exécuter
 
