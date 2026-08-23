@@ -119,10 +119,12 @@ Fournir une méthode simple pour lancer un navigateur dans un environnement isol
 
 ### 1. Télécharger le script
 
-En tant qu’utilisateur (non-root) :
+En tant qu'utilisateur **non-root** :
 
-curl -L https://raw.githubusercontent.com/virg736/safefox-vpn-firejail/main/Script-safefox-vpn-firejail -o install-safefox.sh
 
+curl -fL \
+  https://raw.githubusercontent.com/virg736/safefox-vpn-firejail/main/Script-safefox-vpn-firejail \
+  -o install-safefox.sh
 
 2. Rendre le script exécutable
 chmod +x install-safefox.sh
@@ -130,14 +132,13 @@ chmod +x install-safefox.sh
 3. Lancer le script
 ./install-safefox.sh
 
-💡 Le script installe Firejail, Firefox-Esr et configure l’alias safefox.
+💡 Le script installe Firejail et Firefox ESR, puis configure l’alias safefox.
 
 Vérification après installation
 
-Une fois l’installation terminée, ouvrez un nouveau terminal ou rechargez le fichier de configuration pour activer l'alias safefox :
+Une fois l’installation terminée, ouvrez un nouveau terminal ou rechargez le fichier de configuration de votre shell :
 
 source ~/.zshrc
-
 ou
 source ~/.bashrc
 
