@@ -130,7 +130,6 @@ cd safefox-vpn-firejail
 
 2. Rendre le script exécutable
 chmod +x Script-safefox-vpn-firejail   
-./Script-safefox-vpn-firejail   
 
 3. Lancer le script   
 ./Script-safefox-vpn-firejail   
