@@ -157,7 +157,7 @@ Le projet part du principe que vous disposez déjà d’un VPN fonctionnel si vo
 
 #### 1. VPN installé sur l’ordinateur hôte
 
-Si Kali Linux ou Debian est exécuté dans une machine virtuelle utilisant un réseau NAT, le trafic de la machine virtuelle passe généralement par la connexion réseau de l’hôte.
+Si Kali Linux ou Debian est exécuté dans une machine virtuelle configurée en mode NAT, le trafic de la machine virtuelle passe généralement par la connexion réseau de l’hôte.
 
 Selon le logiciel VPN utilisé et sa configuration, le trafic de la machine virtuelle peut également être acheminé par le VPN de l’hôte.
 
@@ -174,34 +174,27 @@ nordvpn connect
 
 ---
 
-# À savoir
+## 🔍 Pourquoi cette méthode est-elle utilisée ?
 
-## 🔍 Pourquoi cette méthode est utilisée ?
+Cette approche peut être utilisée par des professionnels de la cybersécurité, des chercheurs en sécurité et des spécialistes des tests d’intrusion autorisés afin de mieux comprendre certaines techniques d’attaque et d’améliorer les mesures de protection.
 
-Cette méthode est utilisée par les **professionnels de la cybersécurité** et les **hackers éthiques** dans un objectif précis :
+Elle permet notamment de :
 
- **Comprendre les techniques d’attaque pour mieux s’en défendre.**
+- analyser des sites suspects dans un environnement isolé ;
+- étudier le comportement d’un site (scripts, redirections, trackers, etc.) ;
+- reproduire des scénarios de test dans un environnement contrôlé et autorisé ;
+- se former, expérimenter ou sensibiliser en limitant les risques.
 
-Elle permet de :
+Elle repose sur deux mécanismes complémentaires :
 
-- Analyser des sites piégés ou malveillants sans exposer son système
-- Étudier le comportement d’un site suspect (scripts, redirections, trackers…)
-- Reproduire des scénarios d’attaque dans un environnement isolé
-- Se former, expérimenter ou sensibiliser sans prise de risque
+- 🔒 **Firejail** : restreint l’environnement du navigateur et limite son accès aux ressources du système ;
+- 🛡️ **VPN** : chiffre le trafic entre l’appareil et le serveur VPN et masque l’adresse IP publique de l’utilisateur auprès des services consultés.
 
-Elle combine deux outils puissants :
+Cette approche peut être utile pour la formation, les audits autorisés, la recherche en sécurité et les environnements d’apprentissage.
 
-- 🔒 **Firejail** : isole complètement le navigateur (aucun accès aux fichiers ni à l’environnement utilisateur)
-- 🛡️ **VPN** : chiffre le trafic et masque l’identité réseau
+🔧 D’autres mécanismes d’isolation peuvent également être utilisés selon les besoins, notamment AppArmor, SELinux, les conteneurs ou les machines virtuelles.
 
-C’est une approche préventive, utilisée dans les audits, la recherche en sécurité, les formations et les environnements d’apprentissage.
-
-🔧 Il existe aussi d'autres outils qui répondent aux mêmes besoins, comme :
-**AppArmor**, **SELinux**, **Docker**, ou encore les **machines virtuelles**, souvent utilisés selon les cas d’usage.
-
-> ⚠️ **Ce projet est à but éducatif uniquement.**
-> Toute utilisation doit rester dans un cadre légal et responsable.
-
+> ⚠️ Ce projet est destiné à un usage pédagogique et défensif. Toute utilisation doit rester dans un cadre légal, autorisé et responsable.
 
 ---
 
