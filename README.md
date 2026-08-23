@@ -27,9 +27,10 @@
 
 # SafeFox VPN Firejail
 
-Navigateur sécurisé basé Firejail et un VPN, conçu pour les tests d'intrusion, l’analyse web et la cybersécurité.
+Navigateur isolé basé sur **Firejail** et associé à un **VPN**, conçu pour les tests de sécurité autorisés, l'analyse web et l'apprentissage de la cybersécurité.
 
 ---
+
 ## Sommaire
 
 - [Avertissement](#avertissement)
@@ -38,7 +39,7 @@ Navigateur sécurisé basé Firejail et un VPN, conçu pour les tests d'intrusio
 - [Configuration mise en place](#configuration-mise-en-place)
 - [Prérequis](#prérequis)
 - [Commandes à exécuter](#commandes-à-exécuter)
-- [VPN : ce qu’il faut comprendre](#vpn--ce-quil-faut-comprendre)
+- [VPN : ce qu'il faut comprendre](#vpn--ce-quil-faut-comprendre)
 - [À savoir](#à-savoir)
 - [Licence](#licence)
 
@@ -46,8 +47,11 @@ Navigateur sécurisé basé Firejail et un VPN, conçu pour les tests d'intrusio
 
 ## Avertissement
 
-**Usage strictement pédagogique.**
-L’auteure décline toute responsabilité en cas d’utilisation malveillante ou illégale.
+⚠️ **Ce projet a été conçu principalement dans un objectif pédagogique et défensif.**
+
+Toute utilisation doit respecter la législation applicable, les autorisations nécessaires ainsi que les règles des systèmes et réseaux concernés.
+
+Ce projet ne constitue pas une autorisation d'accéder à des systèmes, réseaux, comptes ou données appartenant à des tiers.
 
 ---
 
