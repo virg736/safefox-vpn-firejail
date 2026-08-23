@@ -125,8 +125,8 @@ En tant qu'utilisateur **non-root** :
 
 ### 1. Cloner le dépôt
 
-git clone https://github.com/virg736/safefox-vpn-firejail.git
-cd safefox-vpn-firejail
+git clone https://github.com/virg736/safefox-vpn-firejail.git   
+cd safefox-vpn-firejail   
 
 2. Rendre le script exécutable
 chmod +x install-safefox.sh
